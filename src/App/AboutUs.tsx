@@ -21,10 +21,20 @@ const Content = () => {
         <p>Geolonia PWAマップは、Google スプレッドシートを更新するだけでオリジナルの地図アプリを作成することができます。</p>
 
 
-
+        {config.form_url?
+          <>
+            <h2>データの更新について</h2>
+            <p>このアプリのデータを更新するには下の「 + 」ボタンを押してフォームに必要な情報を入力してください。</p>
+            <div className="goto-form"><button><FaPlus color="#FFFFFF" onClick={clickHandler} /></button></div>
+          </>
+          :
+          <></>
+        }
       </div>
     </div>
   );
 };
 
 export default Content;
+
+
