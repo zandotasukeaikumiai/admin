@@ -24,6 +24,9 @@ const Content = (props: Props) => {
     <>
       <div className="shop-link">
         <h2 className="shop-title" style={{ wordBreak: "break-all" }} onClick={clickHandler}>{props.data['スポット名']}</h2>
+        {shop?
+          <p style={{margin: "24px 0", wordBreak: "break-all"}}>{toBreakLine(content)}</p>
+        }
         <div className='tag-box'>
           {
             !isCategoryPage &&
